@@ -1,0 +1,722 @@
+@charset "UTF-8";
+.hilite:hover,
+.thumbs a {
+    text-decoration: none
+}
+
+#about-text h1,
+.description h4,
+.error-404 .page-title,
+.lead,
+.main-content-inner h3,
+.main-content-inner ul li,
+a.page-numbers,
+span.page-numbers {
+    text-transform: uppercase
+}
+
+@font-face {
+    font-family: helveticaneuebold;
+    src: url(../fonts/helvetica_neu_bold-webfont.woff2) format('woff2'), url(../fonts/helvetica_neu_bold-webfont.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Charter Black Italic';
+    src: url(../fonts/Charter-BlackItalic.eot);
+    src: url(../fonts/Charter-BlackItalic.eot?#iefix) format('embedded-opentype'), url(../fonts/Charter-BlackItalic.woff2) format('woff2'), url(../fonts/Charter-BlackItalic.woff) format('woff'), url(../fonts/Charter-BlackItalic.ttf) format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Charter Roman';
+    src: url(../fonts/Charter-Roman.eot);
+    src: url(../fonts/Charter-Roman.eot?#iefix) format('embedded-opentype'), url(../fonts/Charter-Roman.woff2) format('woff2'), url(../fonts/Charter-Roman.woff) format('woff'), url(../fonts/Charter-Roman.ttf) format('truetype');
+    font-weight: 100;
+    font-style: 100;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Charter Black';
+    src: url(../fonts/Charter-Black.eot);
+    src: url(../fonts/Charter-Black.eot?#iefix) format('embedded-opentype'), url(../fonts/Charter-Black.woff2) format('woff2'), url(../fonts/Charter-Black.woff) format('woff'), url(../fonts/Charter-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Apple Chancery';
+    src: url(../fonts/Apple-Chancery.eot);
+    src: url(../fonts/Apple-Chancery.eot?#iefix) format('embedded-opentype'), url(../fonts/Apple-Chancery.woff2) format('woff2'), url(../fonts/Apple-Chancery.woff) format('woff'), url(../fonts/Apple-Chancery.ttf) format('truetype'), url(../fonts/Apple-Chancery.svg#Apple-Chancery) format('svg');
+    font-weight: 100;
+    font-style: normal
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Charter Roman'
+}
+
+.home {
+    background: url(https://mrstevedev.io/wp-content/uploads/2018/11/bg-portfolio.jpg) #add8e6;
+    background-size: cover
+}
+
+
+header {
+    background: #fff
+}
+
+.site-header {
+    height: 76px;
+    padding: 5px
+}
+
+.site-header-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+.social li {
+    display: inline-block
+}
+
+.social li a img {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px
+}
+
+.site-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 11px 0
+}
+
+.site-title {
+    margin: 0
+}
+
+.lead-container {
+    display: flex;
+    justify-content: center
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-family: helveticaneuebold;
+}
+
+.main-content-inner h1,
+.main-content-inner h2,
+.main-content-inner h3,
+.subtext {
+    font-family: 'Charter Black'
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff
+}
+
+.navbar-default .navbar-nav>.active>a {
+    background-color: #a5c8d5
+}
+
+.navbar-default {
+    background-color: #283440;
+    border-color: transparent;
+    border-radius: 0
+}
+
+.navbar-right {
+    padding: 0 0
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: transparent
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent!important
+}
+
+.navbar-collapse {
+    border: none!important;
+    text-align: center!important
+}
+
+.hvr-underline-reveal:before {
+    background: #284d62!important
+}
+
+ul#main-menu {
+    display: inline-flex
+}
+
+/* #about-text {
+    padding: 3rem .5rem;
+} */
+
+#about-text h1 {
+    font-size: 4rem;
+    text-align: left;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+#two-project-about img {
+    position: absolute;
+    right: -290px;
+    width: 85rem;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@media (max-width:486px) {
+    .container-fluid>.navbar-collapse,
+    .container-fluid>.navbar-header,
+    .container>.navbar-collapse,
+    .container>.navbar-header {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .navbar .container {
+        padding: 0;
+    }
+
+    .home .main-content-inner h1 {
+        font-size: 23px!important
+    }
+
+    .main-content-inner h2 {
+        font-size: 28px!important
+    }
+
+    #about-text h1 {
+        font-size: 35px!important
+    }
+
+    .page-template-page-project-mac #about-text h1 {
+        font-size: 29px!important
+    }
+
+    .description,
+    .subtext {
+        font-size: 18px
+    }
+
+    ul.project-views-list {
+        height: initial!important;
+        margin: 40px 0 0 0;
+        text-align: left
+    }
+    .main-content-inner .projects-list li {
+        font-size: 12px!important
+    }
+}
+
+.project-gutenburg-block-bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/**
+** Styles for Gutenburg Project
+**/
+
+
+.page-template-page-vistage-gutenberg-blocks {
+    height: 2800px;
+}
+
+.page-template-page-vistage-gutenberg-blocks footer {
+    display: none;
+}
+
+
+/**
+** End Styles for Gutenburg Project
+**/
+
+@media(min-width:992px) {
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 86vh;
+        flex-direction: column;
+        position: relative;
+    }
+  }
+
+@media (min-width:768px) {
+    .project-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .navbar-default {
+        height: 51px
+    }
+    .navbar-brand img {
+        max-width: 71%;
+        margin: 0 auto
+    }
+
+    .desc-outer {
+        display: flex;
+        flex-direction: column;
+        height: 66vh;
+        justify-content: center
+    }
+}
+
+.main-content-inner {
+    text-align: center
+}
+
+.home .main-content-inner h1 {
+    margin-top: 87px;
+    font-size: 29px
+}
+
+.main-content-inner h3 {
+    font-size: 16px;
+    margin-top: 55px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.main-content-inner ul {
+    padding: 0
+}
+
+.main-content-inner ul li {
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Charter Roman'
+}
+
+.desc-middle ul li:after {
+    content: " \00b7"
+}
+
+.desc-middle li:last-child:after {
+    content: ""
+}
+
+.description,
+.subtext {
+    font-size: 21px;
+    text-align: left
+}
+
+.subtext {
+    color: #254a60;
+    line-height: 30px
+}
+
+.description {
+    font-family: latothin;
+    line-height: 33px;
+    color: #000
+}
+
+.description h4,
+.entry-content p {
+    font-family: helveticaneuebold;
+}
+
+.description h4 {
+    text-align: center;
+    font-size: 11px;
+    color: #c1c1c1;
+}
+.description:nth-child(4) {
+    padding-top: 30px
+}
+
+.description:nth-child(5) {
+    font-size: 14px;
+    color: #254a60
+}
+
+.entry-content p {
+    font-size: 18px;
+    text-align: left
+}
+
+.thumbs img {
+    width: 100%;
+    box-shadow: 0 3px 1px #e4e4e4/*border: solid 2px #283440; border-radius: 4px;*/
+}
+
+.pagination {
+    display: inline-flex;
+    justify-content: flex-end
+}
+
+a.page-numbers,
+span.page-numbers {
+    background: #264b5e;
+    color: #fff;
+    padding: 5px 10px;
+    float: left;
+    font-family: helveticaneuebold;
+    font-size: 12px;
+    margin: 0 1px 0 0;
+    text-decoration: none;
+    transition: .4s ease-in-out
+}
+
+span.page-numbers.current {
+    background: #e8e8e8;
+    color: #000
+}
+
+.page-numbers:hover {
+    background: #000
+}
+
+.show {
+    transition: .6s;
+    display: block!important
+}
+
+.hide {
+    display: none!important
+}
+
+.site-info {
+    display: flex;
+    justify-content: center;
+    font-family: 'Charter Black';
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.hilite {
+    font-weight: bold;
+    color: #284d62;
+    transition: .4s ease-in-out;
+    font-family: 'Charter Black Italic'
+}
+
+.hilite:hover {
+    color: #000
+}
+
+.ampersand {
+    font-family: 'Apple Chancery'
+}
+
+.ampersand-experience {
+    font-family: 'Apple Chancery'
+}
+
+::selection {
+    background: #254a60;
+    color: #fff
+}
+
+@media screen and (max-width:768px) {
+    .site-info {
+        padding: 35px 0;
+    }
+    .main {
+        display: initial!important;
+        justify-content: initial!important;
+        height: auto!important
+    }
+    .main-content-inner h2 {
+        font-size: 22px!important
+    }
+    span.hilite:nth-child(2) {
+        line-height: 12px!important
+    }
+    .social,
+    .specialize-desc {
+        display: none
+    }
+    .home {
+        background: url('/wp-content/uploads/2018/11/bg-portfolio.jpg') -529px 0 #add8e6;
+        background-size: initial
+    }
+}
+
+/* .page-id-55 a {
+    transition: .5s ease-in-out
+} */
+
+.error-404 {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+
+a svg {
+    transition: .2s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: .2s;
+    -webkit-transition-timing-function: ease-in-out
+}
+
+a svg:hover {
+    fill: #c2efff
+}
+
+.page-template-page-changebgapp-php #about-text h1 {
+    font-size: 41px
+}
+
+.page-template-page-changebgapp-php .react-app {
+    max-width: 55%
+}
+
+.navbar-brand {
+    padding: 7px 15px
+}
+
+.page-template-page-experience .navbar-default {
+    background: 0 0
+}
+
+.page-template-page-experience .main-content-inner h3 {
+    margin-top: 0;
+    font-size: 32px;
+    text-transform: initial
+}
+
+@media (max-width:415px) {
+    .thumbs img {
+        border: 0;
+    }
+    ul#main-menu {
+        margin: -1px -1px;
+        display: flex;
+    }
+    .navbar-collapse.in {
+        overflow-y: initial;
+    }
+}
+
+.desc-bottom a,
+.desc-bottom h3 {
+    color: #284d62;
+    -webkit-text-fill-color: #284d62;
+    font-family: 'Charter Black'
+}
+
+.social svg {
+    fill: #fff
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #000;
+    background-color: #a5c8d5;
+    transition: .32s ease-in-out
+}
+
+.navbar-default .navbar-nav>.active>a:focus,
+.page-template-page-about .navbar-default .navbar-nav>.active>a,
+.page-template-page-contact .navbar-default .navbar-nav>.active>a,
+.page-template-page-projects .navbar-default .navbar-nav>.active>a,
+.page-template-page-project .navbar-default .navbar-nav>.current-page-ancestor>a,
+.page-template-page-vistage-gutenberg-blocks .navbar-default .navbar-nav>.current-page-ancestor>a {
+    color: #000;
+    background-color: #fff
+}
+
+.page-template-page-home .navbar-default .navbar-nav>.active>a:hover {
+    color: #000;
+    background: #a5c8d5
+}
+
+.error-404 h1 {
+    font-family: 'Charter Black'!important
+}
+
+.error-404 h2 {
+    text-transform: initial!important;
+    font-size: 23px
+}
+
+.fa-heart {
+    font-size: 18px;
+    animation: pulse 1s infinite;
+    color: #284d62
+}
+
+@keyframes pulse {
+    10% {
+        transform: scale(1.1)
+    }
+}
+
+ul.projects-list {
+    margin-left: 0;
+    text-align: left;
+    color: #ccc;
+    height: 33px
+}
+
+div#about-text p {
+    clear: left;
+    font-family: helveticaneuebold;
+    font-size: 2rem;
+    color: #b1b1b1;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.projects-list li {
+    padding: 5px 10px 5px 0;
+    font-family: helveticaneuebold!important;
+    font-size: 16px!important;
+    margin-left: 20px
+}
+
+.hilite-react {
+    color: #61dafb
+}
+
+.hilite-discogs {
+    color: #333
+}
+
+a.hilite-angular {
+    color: #c3002f
+}
+
+@media(min-width:992px) {
+    .page-template-page-projects .main {
+        height: 772px
+    }
+    div#project-img {
+        position: absolute;
+        top: -100px;
+        left: -30px
+    }
+    div#project-views {
+        position: absolute;
+        right: 0;
+        top: 47px;
+        text-align: left
+    }
+    .page-template-page-project-mac div#project-views {
+        bottom: -40px;
+        top: initial;
+        right: initial
+    }
+    div#project-img-mac {
+        padding-top: 45px
+    }
+}
+
+ul.projects-list li {
+    float: left;
+    display: list-item!important
+}
+
+#project-views li {
+    font-family: helveticaneuebold;
+    font-size: 16px
+}
+
+#project-views li {
+    color: #bfbfbf
+}
+
+.project-views-list li {
+    padding: 12px 0;
+    border-bottom: solid 2px #eaeaea
+}
+
+#project-views li a:focus,
+#project-views li a:hover {
+    text-decoration: none
+}
+
+ul.project-views-list li {
+    width: 100%;
+    cursor: pointer;
+    transition: color .3s ease, text-indent .3s ease;
+    text-indent: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-transform: capitalize!important
+}
+
+.project-views-list li:hover {
+    text-indent: 15px
+}
+
+#project-views li.active,
+#project-views li:hover {
+    color: #333
+}
+
+.project-views-list li.active,
+.project-views-list li:hover:not(.link) {
+    text-indent: 35px
+}
+
+#project-views li:last-child {
+    color: #1f7cdc
+}
+
+.projects-list li:first-child {
+    list-style: none;
+    margin-left: 0
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #a8d9f1
+}
+
+.navbar-collapse {
+    border-top: none!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important
+}
+
+.frame .screen {
+    transition: .32s ease;
+    position: absolute;
+    z-index: 5;
+    height: inherit;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 52%;
+}
+
+.projects-right div:nth-child(4) {
+    clear: left
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

@@ -1,0 +1,687 @@
+$primary-color: #000;
+$secondary-color: #254a60;
+$font-size: 13px;
+
+@font-face {
+    font-family: 'latoblack';
+    src: url('../fonts/lato-black-webfont.eot');
+    src: url('../fonts/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-black-webfont.woff2') format('woff2'),
+         url('../fonts/lato-black-webfont.woff') format('woff'),
+         url('../fonts/lato-black-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latobold';
+    src: url('../fonts/lato-bold-webfont.eot');
+    src: url('../fonts/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('../fonts/lato-bold-webfont.woff') format('woff'),
+         url('../fonts/lato-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoheavy';
+    src: url('../fonts/lato-heavy-webfont.eot');
+    src: url('../fonts/lato-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-heavy-webfont.woff2') format('woff2'),
+         url('../fonts/lato-heavy-webfont.woff') format('woff'),
+         url('../fonts/lato-heavy-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latolight';
+    src: url('../fonts/lato-light-webfont.eot');
+    src: url('../fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-light-webfont.woff2') format('woff2'),
+         url('../fonts/lato-light-webfont.woff') format('woff'),
+         url('../fonts/lato-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latomedium';
+    src: url('../fonts/lato-medium-webfont.eot');
+    src: url('../fonts/lato-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-medium-webfont.woff2') format('woff2'),
+         url('../fonts/lato-medium-webfont.woff') format('woff'),
+         url('../fonts/lato-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular-webfont.eot');
+    src: url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lato-regular-webfont.woff') format('woff'),
+         url('../fonts/lato-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latosemibold';
+    src: url('../fonts/lato-semibold-webfont.eot');
+    src: url('../fonts/lato-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/lato-semibold-webfont.woff') format('woff'),
+         url('../fonts/lato-semibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latothin';
+    src: url('../fonts/lato-thin-webfont.eot');
+    src: url('../fonts/lato-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-thin-webfont.woff2') format('woff2'),
+         url('../fonts/lato-thin-webfont.woff') format('woff'),
+         url('../fonts/lato-thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'great_vibesregular';
+    src: url('../fonts/greatvibes-regular-webfont.eot');
+    src: url('../fonts/greatvibes-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/greatvibes-regular-webfont.woff2') format('woff2'),
+         url('../fonts/greatvibes-regular-webfont.woff') format('woff'),
+         url('../fonts/greatvibes-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'rochester';
+  src: url('../fonts/rochester-regular-webfont.eot');
+  src: url('../fonts/rochester-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/rochester-regular-webfont.woff2') format('woff2'),
+       url('../fonts/rochester-regular-webfont.woff') format('woff'),
+       url('../fonts/rochester-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body {
+  font-size:$font-size;
+  font-family: 'latoregular';
+}
+
+.home{
+  background: lightblue url('../images/bg-portfolio.png');
+  background-size: cover;
+}
+
+// Header styles
+header{
+  background:#fff;
+}
+
+.site-header{
+  height: 76px;
+  padding:5px;
+}
+
+.site-header-inner{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social li{
+  display:inline-block;
+}
+
+.social li a img{
+  width:16px;
+  height:16px;
+  margin-left: 8px;
+}
+
+.site-brand {
+  display: flex;
+  justify-content: center;
+}
+.site-title{
+  margin: 0;
+  margin-bottom: 0;
+}
+
+.lead-container{
+  display: flex;
+  justify-content: center;
+}
+
+.lead{
+  line-height: 10px;
+  font-family: 'lato';
+  text-transform: uppercase;
+  font-size: 9px;
+  margin: 0 auto;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #000;
+    font-family: latoblack;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #254a60;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    background-color: #f3f3f3!important;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 0;
+}
+
+.navbar-right{
+      padding: 5px 0;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent!important;
+}
+
+.navbar-collapse {
+    border: none!important; 
+    text-align: center!important;
+}
+
+
+
+// Underline Reveal Overwrite //
+.hvr-underline-reveal:before {
+  background: #284D62!important;
+}
+
+ul#main-menu{
+  display: inline-flex;
+}
+
+#about-text h1{
+  font-size: 56px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 0;
+}
+
+@media(max-width: 486px){
+
+  .home .main-content-inner h1 {
+    font-size: 19px!important;
+  }
+  .main-content-inner h2 {
+    font-size: 21px!important;
+  }
+
+  #about-text h1{
+    font-size: 55px!important;
+  }
+
+  .description, .subtext {
+    font-size: 18px;
+  }
+
+  .site-brand{
+    display: none;
+  }
+}
+
+@media(min-width:992px) {
+  .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 590px;
+      flex-direction: column;
+  }
+}
+
+@media (min-width: 768px){
+  .navbar-default {
+    height: 56px;
+}
+
+.navbar-brand img{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.desc-outer{
+  display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+}
+}
+
+.main-content-inner{
+  text-align: center;
+}
+
+.main-content-inner h1,
+.main-content-inner h2,
+.main-content-inner h3{
+  font-family: 'latoblack';
+}
+
+.home .main-content-inner h1{
+  font-size:29px;
+}
+
+.main-content-inner h3{
+  text-transform: uppercase;
+  font-size:16px;
+  margin-top:55px;
+  margin-bottom: 0;
+}
+
+.main-content-inner ul{
+  padding:0;
+}
+.main-content-inner ul li{
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.desc-middle ul li:after{ content: " \00b7"; }
+.desc-middle li:last-child:after{
+  content:"";
+}
+
+.page-template-page-nipponsushibarsd #about-text h1{
+  font-size:40px!important;
+}
+
+.page-template-page-blackviplimo #about-text h1{
+  font-size:56px!important;
+}
+
+.hvr-icon-sink-away{
+  font-size:24px!important;
+  color:#000!important;
+  padding-right:3.2em!important;
+}
+ .hvr-icon-sink-away:before,
+ .hvr-icon-sink-away:after {
+    content: "\f0ed"!important;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 590px;
+}
+
+.subtext{
+  color: #254a60;
+  font-size: 21px;
+  font-family: 'latoblack';
+  text-align: left;
+  line-height: 30px;
+}
+
+.description{
+  font-size: 21px;
+  text-align: left;
+  font-family: 'latothin';
+  line-height: 33px;
+  color: #000;
+}
+
+.description h4{
+  text-align: center;
+  font-size: 11px;
+  font-family: 'latoblack';
+  text-transform: uppercase;
+}
+
+.description:nth-child(4){
+  padding-top: 30px;
+}
+
+.description:nth-child(5){
+  font-size: 14px;
+  color: #254a60;
+}
+
+.entry-content p{
+  font-family: 'latoblack';
+  font-size: 23px;
+  text-align: left; 
+}
+
+.thumbs img {
+  width: 100%;
+  /*border: solid 5px #fff;
+  box-shadow: 0 3px 7px #e4e4e4;*/
+}
+
+.thumbs li{
+  position: relative;
+  list-style: none;
+}
+
+.thumbs a{
+  text-decoration: none;
+}
+
+.projects-overlay{
+    display: none!important;
+    position: absolute;
+    background: rgba(48,83,104,.9);
+    height: 83%;
+    width: 100%;
+    display: block;
+    color: #fff;
+    padding: 77px 0 0 0;
+    font-family: latoblack;
+    font-size: 16px;
+}
+
+.pagination{
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+a.page-numbers, span.page-numbers {
+    background: #264b5e;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    float: left;
+    font-family: 'latoblack';
+    font-size: 12px;
+    margin: 0px 1px 0px 0px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+}
+
+span.page-numbers.current {
+    background: #e8e8e8 ;
+    color: #000;
+}
+.page-numbers:hover{
+  background:#000;
+}
+
+.show{
+  transition: .6s;
+  display: block!important;
+}
+.hide{
+  display:none!important;
+}
+
+.site-info {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: latoblack;
+    font-size: 10px;
+    padding: 50px;
+}
+
+.hilite{
+  color: #284D62;
+  transition: .4s ease-in-out;
+}
+
+.hilite:hover{
+  color: #000;
+  text-decoration: none;
+}
+
+.ampersand{
+  font-family: 'great_vibesregular';
+}
+
+.ampersand-experience{
+  font-family: 'rochester';
+}
+
+::selection {
+    background: #254a60;
+    color: #fff;
+}
+
+.modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+    width: 100%
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+}
+.modal-body .form-horizontal .col-sm-offset-2 {
+    margin-left: 15px;
+}
+
+.modal-body {
+
+    text-align: left;
+}
+
+.modal-dialog{
+    margin-top: 130px;
+}
+
+div.wpforms-container-full {
+    text-align: left;
+}
+
+@media screen and (max-width:768px){
+
+    .main {
+    display: initial!important;
+    justify-content: initial!important;
+    /* align-items: center; */
+    height: auto!important; 
+}
+   
+    .main-content-inner h2{
+      font-size: 20px!important;
+    }
+    span.hilite:nth-child(2){
+      line-height:12px!important;
+    }
+
+    .specialize-desc{
+       display: none;
+    }
+
+    .social{
+      display: none;
+    }
+
+.home {
+    background: url(../images/portfolio-bg.png) #add8e6 -692px 0;
+    background-size: initial;
+  }
+}
+
+// .site-navigation{
+//   width:0;
+// }
+
+div.wpforms-container-full .wpforms-form textarea {
+    width:60%;
+}
+
+div.wpforms-container-full .wpforms-form button[type=submit]{
+    transition:1s;
+    background-color:#337ab7;
+    color:#fff;
+    border:none;
+    font-family: latoblack;
+    text-transform: uppercase;
+}
+
+div.wpforms-container-full
+.wpforms-form button[type=submit]:hover{
+    border:none!important;
+    background-color:#4d91cb!important;
+}
+
+.page-id-55 a{
+    transition: .5s ease-in-out;
+
+}
+
+.error-404 .page-title{
+  text-transform: uppercase;
+}
+.error-404{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+a svg{
+    transition: .2s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: .2s;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+a svg:hover{
+  fill: #254a60;
+}
+
+.page-template-page-changebgapp-php #about-text h1 {
+    font-size: 41px;
+}
+.page-template-page-changebgapp-php .react-app {
+  max-width: 55%;
+}
+
+.navbar-brand {
+    padding: 7px 15px;
+}
+
+.page-template-page-experience{
+  background: url('/wp-content/uploads/2017/10/pexels-photo-238118.jpeg') no-repeat;
+  background-size: cover;
+}
+
+.page-template-page-experience  .navbar-default{
+  background: transparent;
+}
+
+.page-template-page-experience 
+.main-content-inner h3{ margin-top: 0px; font-size: 32px;
+  text-transform: initial; }
+
+.form-reviews-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:585px;
+}
+
+.form-reviews{
+  background: rgba(255,255,255,0.59);
+  padding:45px;
+  width: 60%;
+  border-radius: 6px;
+  height: 450px;
+  box-shadow: 0 1px 1px #ccc;  
+}
+
+@media(max-width:415px){
+  .form-reviews{
+    width:initial;
+    height: auto;
+  }
+}
+
+#wpforms-form-307{
+  position: relative;
+}
+
+div.wpforms-container-full .wpforms-form label.wpforms-error {
+  position: absolute;
+  right:15px;
+  text-transform: uppercase;
+  font-size:10px!important;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+  display: none!important;
+}
+
+.wpforms-field-medium{
+  font-size:10px!important;
+  border:none!important;
+}
+
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium{
+  max-width: 100%!important;
+}
+
+#wpforms-307-field_0-error{bottom:10px;}
+div.wpforms-container-full .wpforms-form button[type=submit] {
+  width: 100%;
+  border:none!important;
+  border-radius: 3px;
+  background:#337AB7!important;
+  color:#FFF!important;
+}
+
+#wpforms-307-field_0-error {
+  top: 24px;
+}
+
+label#wpforms-307-field_2-error {
+  top: 75px;
+}
+
+.form-reviews p:nth-child(2){
+  font-family: 'latoblack';
+  font-size:16px;
+}
+
+.form-reviews p:nth-child(2):after{
+  content:"";
+  border: solid 1px #337AB7;
+  display: block;
+  width:6%;
+  margin:6px auto;
+}
+
+.form-reviews p:nth-child(3){
+  font-family: 'latoblack';
+  font-size:18px;
+}
+
+div.wpforms-container-full .wpforms-form label.wpforms-error{
+  color:#FF3E3E!important;
+  font-family: 'latoblack';  
+}
+
+
+
