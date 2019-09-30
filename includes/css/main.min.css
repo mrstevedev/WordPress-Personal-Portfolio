@@ -64,13 +64,12 @@ body {
 }
 
 .home {
-    background: url(https://mrstevedev.io/wp-content/uploads/2018/11/bg-portfolio.jpg) #add8e6;
+    background: url(/wp-content/uploads/2018/11/bg-portfolio.jpg) #add8e6;
     background-size: cover
 }
 
-
-header {
-    background: #fff
+.navbar {
+    width: 100%;
 }
 
 .site-header {
@@ -173,17 +172,32 @@ ul#main-menu {
     font-weight: bold;
 }
 
-#two-project-about img {
+#two-project-about img, #three-project-challenges div:nth-child(2) img {
     position: absolute;
     right: -290px;
     width: 85rem;
+}
+
+#three-project-challenges .row.double-row:nth-child(1) #about-text:nth-child(1) img {
+    margin-right: 845px;
+    max-width: initial;
+}
+
+/* #three-project-challenges div:nth-child(1) img {
+    position: absolute;
+    right: 290px;
+    width: 85rem;
+} */
+
+.challenge-text {
+    padding-left: 5rem;
 }
 
 body {
     overflow-x: hidden;
 }
 
-@media (max-width:486px) {
+@media (max-width: 992px) {
     .container-fluid>.navbar-collapse,
     .container-fluid>.navbar-header,
     .container>.navbar-collapse,
@@ -225,12 +239,16 @@ body {
     .main-content-inner .projects-list li {
         font-size: 12px!important
     }
+
+    #two-project-about img, #three-project-challenges div:nth-child(2) img {
+        position: initial;
+    }
 }
 
 .project-gutenburg-block-bottom {
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 25px;
 }
 
 /**
@@ -239,11 +257,27 @@ body {
 
 
 .page-template-page-vistage-gutenberg-blocks {
-    height: 2800px;
+    height: 3350px;
 }
 
 .page-template-page-vistage-gutenberg-blocks footer {
-    display: none;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    box-shadow: 0 12px 29px #e8e8e8;
+}
+
+.page-template-page-vistage-gutenberg-blocks footer p {
+    margin: 0;
+}
+
+.page-template-page-vistage-gutenberg-blocks .site-info {
+    display: initial;
+    font-size: 1.3rem;
 }
 
 
@@ -252,14 +286,62 @@ body {
 **/
 
 @media(min-width:992px) {
-    section {
+    /* .page-template-page-vistage-gutenberg-blocks .navbar {
+        position: fixed;
+        z-index: 1;
+    } */
+    .main {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 86vh;
         flex-direction: column;
         position: relative;
+        margin-bottom: 155px;
     }
+    section {
+        display: flex;
+        align-items: center;
+        height: 86vh;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 155px;
+    }
+    .double-row {
+        margin-bottom: 55px;
+    }
+    .container {
+        padding: 0;
+    }
+
+    .left-text {
+        padding-top:3rem
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 50px;
+        right: 25px;
+        width: 45px;
+        height: 45px;
+        background: #283440;
+        transition: .2s ease-in-out;
+        display: none;
+        border-radius: 100%;
+        z-index: 1;
+    }
+    .back-to-top a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        color:#fff;
+    }
+    /* .show {
+        display: block;
+    } */
   }
 
 @media (min-width:768px) {
@@ -392,10 +474,10 @@ span.page-numbers.current {
     background: #000
 }
 
-.show {
+/* .show {
     transition: .6s;
     display: block!important
-}
+} */
 
 .hide {
     display: none!important
@@ -405,8 +487,7 @@ span.page-numbers.current {
     display: flex;
     justify-content: center;
     font-family: 'Charter Black';
-    font-size: 10px;
-    font-weight: bold;
+    /* font-size: 10px; */
 }
 
 .hilite {
@@ -715,8 +796,21 @@ ul.project-views-list li {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    font-size: 1.1rem;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #283440;
+}
+
+::-webkit-scrollbar-track {
+    background: #e2e2e2;
 }

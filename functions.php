@@ -116,6 +116,9 @@ function _tk_scripts() {
   // load Hover.css effects
 	wp_enqueue_style( 'hover-css', THEME_DIR_URI . '/includes/css/Hover/css/hover.css', false );
 
+	// load aos 
+	wp_enqueue_style('aos', 'https://unpkg.com/aos@next/dist/aos.css', false);
+
 	// load _tk styles
 	wp_enqueue_style( '_tk-style', get_stylesheet_uri() );
 
@@ -127,8 +130,14 @@ function _tk_scripts() {
 
 	wp_enqueue_script( '_tk-skip-link-focus-fix', THEME_DIR_URI . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-  // load custom file js
-  wp_enqueue_script( 'custom-js', THEME_DIR_URI . '/includes/js/custom.js', array('jquery'), '20130116', true );
+  	// load custom file js
+  	wp_enqueue_script( 'custom-js', THEME_DIR_URI . '/includes/js/custom.js', array('jquery'), '20130116', true );
+
+  	// load smoothscroll
+	wp_enqueue_script('smoothscroll', THEME_DIR_URI . '/includes/js/smoothscroll.min.js', ['jquery'], null, true);
+	
+	// load aos
+	wp_enqueue_script('aos', 'https://unpkg.com/aos@next/dist/aos.js', [], null, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
