@@ -17,9 +17,9 @@
     <link rel="preload" as="font" href="/wp-content/themes/Portfolio-Site-2017/includes/fonts/Charter-Roman.woff2" type="font/woff2" crossorigin />
     <link rel="preload" as="font" href="/wp-content/themes/Portfolio-Site-2017/includes/fonts/Charter-Black.woff2" type="font/woff2" crossorigin />
     <link rel="preload" as="font" href="/wp-content/themes/Portfolio-Site-2017/includes/fonts/Charter-BlackItalic.woff2" type="font/woff2" crossorigin />
-    <link rel="preload" as="font" href="https://mrstevedev.io/wp-content/themes/Portfolio-Site-2017/includes/fonts/Apple-Chancery.woff2" type="font/woff2" crossorigin />
-    <link rel="preload" as="font" href="https://mrstevedev.io/wp-content/themes/Portfolio-Site-2017/includes/fonts/helvetica_neu_bold-webfont.woff2" type="font/woff2" crossorigin />
-    <link rel="preload" as="image" href="https://mrstevedev.io/wp-content/uploads/2018/11/bg-portfolio.jpg" />
+    <link rel="preload" as="font" href="<?php echo bloginfo('url') ?>/wp-content/themes/Portfolio-Site-2017/includes/fonts/Apple-Chancery.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="<?php echo bloginfo('url') ?>/wp-content/themes/Portfolio-Site-2017/includes/fonts/helvetica_neu_bold-webfont.woff2" type="font/woff2" crossorigin />
+    <?php if(is_home() ) : ?> <link rel="preload" as="image" href="<?php echo bloginfo('url') ?>/wp-content/uploads/2018/11/bg-portfolio.jpg" /><?php endif; ?>
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">

@@ -197,21 +197,21 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 /* Create Custom Post Type */
-add_action( 'init', 'setup_post_type' );
-function setup_post_type(){
-	register_post_type( 'todo', array(
-		'labels' => array(
-			'name' => __( 'Todo', 'todo' ),
-			'singular_name' => __( 'Todo', 'todo'),
-		),
-		'show_ui' => true,
-		'has_archive' => false,
-		'supports' => array( 'title' ),
-		'show_in_rest' => true,
-		'rest_base' => 'todo',
-		'rest_controller_class' => 'WP_REST_Posts_Controller'
-	));
-}
+// add_action( 'init', 'setup_post_type' );
+// function setup_post_type(){
+// 	register_post_type( 'todo', array(
+// 		'labels' => array(
+// 			'name' => __( 'Todo', 'todo' ),
+// 			'singular_name' => __( 'Todo', 'todo'),
+// 		),
+// 		'show_ui' => true,
+// 		'has_archive' => false,
+// 		'supports' => array( 'title' ),
+// 		'show_in_rest' => true,
+// 		'rest_base' => 'todo',
+// 		'rest_controller_class' => 'WP_REST_Posts_Controller'
+// 	));
+// }
 
 
 /* Custom API Functionlity */
@@ -262,74 +262,74 @@ function latest_post_by_author( $data ){
 // }
 
 //Create Testimonials Custom Post Type
-function sp_portfolio_register_post_type(){
+// function sp_portfolio_register_post_type(){
 
-	$args = array(
-		'labels' 				=> array(
-			'name' 				=> __('Testimonials'),
-			'singular_name' 	=> __('Testimonial'),
-			'all_items' 		=> __('All Testimonials'),
-			'add_new_item'		=> __('Add New Testimonial'),
-			'edit_item'			=> __('Edit Testimonial'),
-			'view_item'			=> __('View Testimonial')
-		),
-			'public' 			=> 'true',
-			'has_archive' 		=> 'true',
-			'rewrite'			=> array('slug' => 'testimonials'),
-			'show_ui'			=> true,
-			'show_in_menu'		=> true,
-			'show_in_nav_menus' => true,
-			'capability_type'	=> 'page',
-			'supports'			=> array('title','editor','thumbnail'),
-			'exclude_from_search' => 'true',
-			'menu_position'		=> 80,
-			'has_archive'		=> true,
-			'menu_icon'			=> 'dashicons-format-status'
-	);
-	register_post_type('Testimonials', $args);
-}	
+// 	$args = array(
+// 		'labels' 				=> array(
+// 			'name' 				=> __('Testimonials'),
+// 			'singular_name' 	=> __('Testimonial'),
+// 			'all_items' 		=> __('All Testimonials'),
+// 			'add_new_item'		=> __('Add New Testimonial'),
+// 			'edit_item'			=> __('Edit Testimonial'),
+// 			'view_item'			=> __('View Testimonial')
+// 		),
+// 			'public' 			=> 'true',
+// 			'has_archive' 		=> 'true',
+// 			'rewrite'			=> array('slug' => 'testimonials'),
+// 			'show_ui'			=> true,
+// 			'show_in_menu'		=> true,
+// 			'show_in_nav_menus' => true,
+// 			'capability_type'	=> 'page',
+// 			'supports'			=> array('title','editor','thumbnail'),
+// 			'exclude_from_search' => 'true',
+// 			'menu_position'		=> 80,
+// 			'has_archive'		=> true,
+// 			'menu_icon'			=> 'dashicons-format-status'
+// 	);
+// 	register_post_type('Testimonials', $args);
+// }	
 
-add_action( 'init', 'sp_portfolio_register_post_type' );
+// add_action( 'init', 'sp_portfolio_register_post_type' );
 
-// Add Meta Boxes to Testimonials Custom Post Type
-function my_add_meta_box(){
-	add_meta_box( 'testimonial-details', 'Testimonial Details', 'my_meta_box_cb', 'testimonials', 'normal', 'default' );
-}
+// // Add Meta Boxes to Testimonials Custom Post Type
+// function my_add_meta_box(){
+// 	add_meta_box( 'testimonial-details', 'Testimonial Details', 'my_meta_box_cb', 'testimonials', 'normal', 'default' );
+// }
 
-function my_meta_box_cb($post){
-	$values = get_post_custom( $post->ID );
-	$client_name = isset( $values['client_name'] ) ? esc_attr( $values['client_name'][0] ) : "";
-	$company = isset( $values['company'] ) ? esc_attr( $values['company'][0] ) : "";
-	wp_nonce_field( 'testimonials_details_nonce_action', 'testimonial_details_nonce' );
-	$html  = '';
-	$html .= '<label>Client Name</label>';
-	$html .= '<input type="text" name="client_name" id="client_name" style="margin-top:15px;margin-left:9px; margin-bottom:10px;" value="' . $client_name . '"><br/>';
-	$html .= '<label>Company</label>';
-	$html .= '<input type="text" name="" id="" style="margin-left:26px; margin-bottom:15px;" value="' . $company . '">';
-	echo $html;
-}
+// function my_meta_box_cb($post){
+// 	$values = get_post_custom( $post->ID );
+// 	$client_name = isset( $values['client_name'] ) ? esc_attr( $values['client_name'][0] ) : "";
+// 	$company = isset( $values['company'] ) ? esc_attr( $values['company'][0] ) : "";
+// 	wp_nonce_field( 'testimonials_details_nonce_action', 'testimonial_details_nonce' );
+// 	$html  = '';
+// 	$html .= '<label>Client Name</label>';
+// 	$html .= '<input type="text" name="client_name" id="client_name" style="margin-top:15px;margin-left:9px; margin-bottom:10px;" value="' . $client_name . '"><br/>';
+// 	$html .= '<label>Company</label>';
+// 	$html .= '<input type="text" name="" id="" style="margin-left:26px; margin-bottom:15px;" value="' . $company . '">';
+// 	echo $html;
+// }
 
-function my_save_meta_box(){
+// function my_save_meta_box(){
 
-	// Bail if we are doing an autosave
-	if( defined( 'DOING AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+// 	// Bail if we are doing an autosave
+// 	if( defined( 'DOING AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 	
-	// if our nonce isn't there, or we can't verify it, bail
-	if( !isset( $_POST['testimonials_details_nonce'] ) || !wp_verify_nonce( $_POST['testimonial_details_nonce'], 'testimonial_details_nonce_action') ) return;
+// 	// if our nonce isn't there, or we can't verify it, bail
+// 	if( !isset( $_POST['testimonials_details_nonce'] ) || !wp_verify_nonce( $_POST['testimonial_details_nonce'], 'testimonial_details_nonce_action') ) return;
 
-	// 
-	if( !current_user_can( 'edit_post' ) ) return;
+// 	// 
+// 	if( !current_user_can( 'edit_post' ) ) return;
 
-	//
-	if( isset($_POST['client_name'] ) )
-		update_post_meta( $post_id, 'client_name', $_POST['client_name']);
+// 	//
+// 	if( isset($_POST['client_name'] ) )
+// 		update_post_meta( $post_id, 'client_name', $_POST['client_name']);
 
-	//
-	if( isset($_POST['company'] ) )
-		update_post_meta( $post_id, 'company', $_POST['company'] );
-}
-add_action( 'add_meta_boxes', 'my_add_meta_box' );
-add_action( 'save_post', 'my_save_meta_box' );
+// 	//
+// 	if( isset($_POST['company'] ) )
+// 		update_post_meta( $post_id, 'company', $_POST['company'] );
+// }
+// add_action( 'add_meta_boxes', 'my_add_meta_box' );
+// add_action( 'save_post', 'my_save_meta_box' );
 
 
 

@@ -166,20 +166,23 @@ ul#main-menu {
 } */
 
 #about-text h1 {
-    font-size: 4rem;
+    font-size: 3.8rem;
     text-align: left;
     margin-top: 0;
     font-weight: bold;
 }
 
-#two-project-about img, #three-project-challenges div:nth-child(2) img {
+#two-project-about img, #three-project-challenges div:nth-child(2) img:not(.plus-icon) {
     position: absolute;
-    right: -290px;
-    width: 85rem;
+    left: 61px;
 }
 
 #three-project-challenges .row.double-row:nth-child(1) #about-text:nth-child(1) img {
     margin-right: 845px;
+    max-width: initial;
+}
+
+#vistage-image .img-responsive {
     max-width: initial;
 }
 
@@ -269,6 +272,7 @@ body {
     align-items: center;
     height: 35px;
     box-shadow: 0 12px 29px #e8e8e8;
+    z-index: 1;
 }
 
 .page-template-page-vistage-gutenberg-blocks footer p {
@@ -278,6 +282,46 @@ body {
 .page-template-page-vistage-gutenberg-blocks .site-info {
     display: initial;
     font-size: 1.3rem;
+}
+
+.project-carousel {
+    position: relative;
+    min-height: 85%;
+    padding: 2.5rem 0;
+}
+
+.project-carousel>.row:not(:last-child) {
+    position: absolute;
+    z-index: 1;
+}
+/* .project-carousel .row:nth-child(2) {
+    visibility: hidden;
+} */
+
+.project-carousel-buttons {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.carousel-btn {
+    width: 13px;
+    height: 13px;
+    background: #d8d8d8;
+    display: block;
+    border-radius: 100%;
+    transition: .23s
+}
+
+.carousel-btn.active {
+    width: 17px;
+    height: 17px;
+    background: #1e366b;
+    margin: -2px 0;
 }
 
 
@@ -479,8 +523,8 @@ span.page-numbers.current {
     display: block!important
 } */
 
-.hide {
-    display: none!important
+.visibility-hidden {
+    visibility: hidden!important
 }
 
 .site-info {
@@ -661,10 +705,10 @@ ul.projects-list {
 div#about-text p {
     clear: left;
     font-family: helveticaneuebold;
-    font-size: 2rem;
+    font-size: 1.96rem;
     color: #b1b1b1;
     text-align: left;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .projects-list li {
@@ -678,13 +722,63 @@ div#about-text p {
     color: #61dafb
 }
 
-.hilite-discogs {
+.hilite-black-bold {
     color: #333
 }
+
+/* .hilite-black-underline {
+    border-bottom: solid 3px;
+    transition: .32s ease;
+}
+
+
+.hilite-black-underline:hover {
+    color:#333;
+    border-bottom: solid 3px #333;
+} */
 
 a.hilite-angular {
     color: #c3002f
 }
+
+/* Auto Carousel */
+.slide-1 {
+    background-size: cover;
+    animation:fade 8s infinite;
+    -webkit-animation:fade 8s infinite;
+  
+  } 
+  .slide-2 {
+    background-size: cover;
+    animation:fade2 8s infinite;
+    -webkit-animation:fade2 8s infinite;
+  }
+  .slide-3 {
+    background-size: cover;
+    animation:fade3 8s infinite;
+    -webkit-animation:fade3 8s infinite;
+  }
+  @keyframes fade
+  {
+    0%   {opacity:1}
+    33.333% { opacity: 0}
+    66.666% { opacity: 0}
+    100% { opacity: 1}
+  }
+  @keyframes fade2
+  {
+    0%   {opacity:0}
+    33.333% { opacity: 1}
+    66.666% { opacity: 0 }
+    100% { opacity: 0}
+  }
+  @keyframes fade3
+  {
+    0%   {opacity:0}
+    33.333% { opacity: 0}
+    66.666% { opacity: 1}
+    100% { opacity: 0}
+  }
 
 @media(min-width:992px) {
     .page-template-page-projects .main {

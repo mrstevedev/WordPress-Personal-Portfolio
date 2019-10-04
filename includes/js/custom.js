@@ -4,7 +4,7 @@ jQuery( document ).ready(function($) {
 
   // Animate header on Gutenberg Project Page
   const nav = document.querySelector('nav');
-  const pageYOffset = 150;
+  // const pageYOffset = 150;
 
    //sticky back to top
    $(window).scroll(function(){
@@ -16,6 +16,33 @@ jQuery( document ).ready(function($) {
       $('.back-to-top').removeClass('fadeInRight show');
     }
   });
+
+  // Plugin to use invisible() visible() methods
+  (function($) {
+    $.fn.invisible = function() {
+        return this.each(function() {
+            $(this).css("visibility", "hidden");
+        });
+    };
+    $.fn.visible = function() {
+        return this.each(function() {
+            $(this).css("visibility", "visible");
+        });
+    };
+}(jQuery));
+  
+  const carouselBtns = document.querySelectorAll('.carousel-btn');
+  const carouselItems = document.querySelectorAll('.project');
+  
+  
+  $(function() {
+    $(carouselBtns).on("click", function(e) {
+       $(carouselBtns).removeClass('active');
+        $(this).addClass("active");
+        const target = $(this).attr('rel');
+        $('#'+target).visible().siblings('div').invisible();
+    });
+});
 
   const backToTopBtn = document.querySelector('.backtotopBtn');
 
