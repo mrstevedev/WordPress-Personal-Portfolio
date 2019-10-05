@@ -141,24 +141,12 @@ get_header(); ?>
     <!-- Carousel Buttons -->
     <div class="project-carousel-buttons">
         <ul>
-            <li>
-                <a href="#Testimonial-Video-Textbox-Right" class="carousel-btn active" rel="project-1"></a>
-            </li>
-            <li>
-                <a href="#Full-Width-Image-Textbox-With-Text" class="carousel-btn" rel="project-2"></a>
-            </li>
-            <li>
-                <a href="#Text-Left-With-Bullets-Button-Right" class="carousel-btn" rel="project-3"></a>
-            </li>
-            <li>
-                <a href="#4-Square-Image-Left" class="carousel-btn" rel="project-4"></a>
-            </li>
-            <li>
-                <a href="#1-Column-Testimonial-Block" class="carousel-btn" rel="project-5"></a>
-            </li>
-            <li>
-                <a href="#Numbered-List-Block" class="carousel-btn" rel="project-6"></a>
-            </li>
+            <li><a href="#Testimonial-Video-Textbox-Right" class="carousel-btn active" rel="project-1"></a></li>
+            <li><a href="#Full-Width-Image-Textbox-With-Text" class="carousel-btn" rel="project-2"></a></li>
+            <li><a href="#Text-Left-With-Bullets-Button-Right" class="carousel-btn" rel="project-3"></a></li>
+            <li><a href="#4-Square-Image-Left" class="carousel-btn" rel="project-4"></a></li>
+            <li><a href="#1-Column-Testimonial-Block" class="carousel-btn" rel="project-5"></a></li>
+            <li><a href="#Numbered-List-Block" class="carousel-btn" rel="project-6"></a></li>
         </ul>
     </div>
     <!-- End Carousel -->
